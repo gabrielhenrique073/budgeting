@@ -18,7 +18,7 @@ struct Welcome: View {
                         Category(name: "Dental Insurance", icon: "🦷"),
                         Category(name: "Health Insurance", icon: "🏥"),
                         Category(name: "Car Insurance", icon: "🚗"),
-                        Category(name: "Home Insurance", icon: "🏡"),
+                        Category(name: "Rent", icon: "🏡"),
                         Category(name: "Pet Insurance", icon: "🐶"),
                     ]
                     

@@ -48,10 +48,10 @@ struct BillsList: View {
                                                 
                                                 // Amount
                                                 Text(String(bill.amount))
-                                                    .foregroundColor(bill.isExpense ? .red : .green)
+                                                    .foregroundColor(bill.flow == .expense ? .red : .green)
                                                 
                                                 // Due
-                                                Text(bill.dueAt.description)
+                                                Text(bill.date.description)
                                                     .font(.caption)
                                             }
                                         )

@@ -19,6 +19,11 @@
 		5A8A5F112BFD31F000DEB242 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8A5F042BFD31F000DEB242 /* Category.swift */; };
 		5A8A5F122BFD31F000DEB242 /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8A5F062BFD31F000DEB242 /* Window.swift */; };
 		5A8A5F132BFD31F000DEB242 /* Index.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8A5F072BFD31F000DEB242 /* Index.swift */; };
+		5A8A5F182BFDAD5400DEB242 /* Frequency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8A5F172BFDAD5400DEB242 /* Frequency.swift */; };
+		5A8A5F1A2BFDB05E00DEB242 /* Recurrence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8A5F192BFDB05E00DEB242 /* Recurrence.swift */; };
+		5A8A5F1C2BFDB2E800DEB242 /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8A5F1B2BFDB2E800DEB242 /* Flow.swift */; };
+		5A8A5F1F2BFDB45500DEB242 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8A5F1E2BFDB45500DEB242 /* String.swift */; };
+		5A8A5F212BFDC62600DEB242 /* Float.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8A5F202BFDC62600DEB242 /* Float.swift */; };
 		5AA8D0B12BFD3169004C7223 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AA8D0B02BFD3169004C7223 /* Assets.xcassets */; };
 		5AA8D0B52BFD3169004C7223 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AA8D0B42BFD3169004C7223 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -36,6 +41,11 @@
 		5A8A5F042BFD31F000DEB242 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		5A8A5F062BFD31F000DEB242 /* Window.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
 		5A8A5F072BFD31F000DEB242 /* Index.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Index.swift; sourceTree = "<group>"; };
+		5A8A5F172BFDAD5400DEB242 /* Frequency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Frequency.swift; sourceTree = "<group>"; };
+		5A8A5F192BFDB05E00DEB242 /* Recurrence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recurrence.swift; sourceTree = "<group>"; };
+		5A8A5F1B2BFDB2E800DEB242 /* Flow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
+		5A8A5F1E2BFDB45500DEB242 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		5A8A5F202BFDC62600DEB242 /* Float.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Float.swift; sourceTree = "<group>"; };
 		5AA8D0A92BFD3168004C7223 /* Budgeting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Budgeting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AA8D0B02BFD3169004C7223 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5AA8D0B22BFD3169004C7223 /* Budgeting.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Budgeting.entitlements; sourceTree = "<group>"; };
@@ -77,6 +87,25 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		5A8A5F142BFDAD0100DEB242 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				5A8A5F172BFDAD5400DEB242 /* Frequency.swift */,
+				5A8A5F192BFDB05E00DEB242 /* Recurrence.swift */,
+				5A8A5F1B2BFDB2E800DEB242 /* Flow.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		5A8A5F1D2BFDB44C00DEB242 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5A8A5F1E2BFDB45500DEB242 /* String.swift */,
+				5A8A5F202BFDC62600DEB242 /* Float.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		5AA8D0A02BFD3167004C7223 = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +127,8 @@
 			children = (
 				5A8A5F072BFD31F000DEB242 /* Index.swift */,
 				5A8A5F062BFD31F000DEB242 /* Window.swift */,
+				5A8A5F1D2BFDB44C00DEB242 /* Extensions */,
+				5A8A5F142BFDAD0100DEB242 /* Enums */,
 				5A8A5F052BFD31F000DEB242 /* Models */,
 				5A8A5F022BFD31F000DEB242 /* Views */,
 				5AA8D0B02BFD3169004C7223 /* Assets.xcassets */,
@@ -192,11 +223,16 @@
 				5A8A5F0C2BFD31F000DEB242 /* CategoryForm.swift in Sources */,
 				5A8A5F0B2BFD31F000DEB242 /* CategoriesList.swift in Sources */,
 				5A8A5F0A2BFD31F000DEB242 /* BillsList.swift in Sources */,
+				5A8A5F1C2BFDB2E800DEB242 /* Flow.swift in Sources */,
+				5A8A5F182BFDAD5400DEB242 /* Frequency.swift in Sources */,
+				5A8A5F1A2BFDB05E00DEB242 /* Recurrence.swift in Sources */,
 				5A8A5F0F2BFD31F000DEB242 /* Welcome.swift in Sources */,
 				5A8A5F0E2BFD31F000DEB242 /* Settings.swift in Sources */,
+				5A8A5F212BFDC62600DEB242 /* Float.swift in Sources */,
 				5A8A5F0D2BFD31F000DEB242 /* Monitor.swift in Sources */,
 				5A8A5F102BFD31F000DEB242 /* Bill.swift in Sources */,
 				5A8A5F082BFD31F000DEB242 /* BillDetail.swift in Sources */,
+				5A8A5F1F2BFDB45500DEB242 /* String.swift in Sources */,
 				5A8A5F122BFD31F000DEB242 /* Window.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

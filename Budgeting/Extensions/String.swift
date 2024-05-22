@@ -1,8 +1,8 @@
-//
-//  String.swift
-//  Budgeting
-//
-//  Created by Gabriel on 5/22/24.
-//
-
-import Foundation
+extension String {
+    var toFloat: Float {
+        return Float(self) ?? 0.0
+    }
+    var toCurrency: String {
+        return self.toFloat.toCurrency
+    }
+}

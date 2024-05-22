@@ -11,10 +11,12 @@ struct BillForm: View {
     // State
     @State private var title = ""
     @State private var category = 0
-    @State private var isExpense = true
-    @State private var isRecurrent = false
+    @State private var flow = Flow.expense
+    @State private var interval = 1
+    @State private var frequency = Frequency.monthly
+    @State private var recurrence = Recurrence.indeterminate
     @State private var amount = ""
-    @State private var dueAt = Date.now
+    @State private var date = Date.now
     
     // Queries
     @Query(
@@ -52,30 +54,41 @@ struct BillForm: View {
                         }
                         .pickerStyle(.navigationLink)
                         
-                        // Is Expense
-                        Toggle(
-                            isOn: $isExpense,
-                            label: {
-                                Text("Is Expense")
-                            }
-                        )
+                        // Flow
+                        Picker("Flow", selection: $flow) {
+                            Text(Flow.expense.description).tag(Flow.expense)
+                            Text(Flow.income.description).tag(Flow.income)
+                        }
+                        .pickerStyle(.menu)
                         
-                        // Is Recurrent
-                        Toggle(
-                            isOn: $isRecurrent,
-                            label: {
-                                Text("Is Recurrent")
-                            }
-                        )
+                        // Interval
+                        Stepper("Interval: \(interval)", value: $interval, in: 1...365, step: 1)
+                        
+                        // Frequency
+                        Picker("Frequency", selection: $frequency) {
+                            Text(Frequency.daily.description).tag(Frequency.daily)
+                            Text(Frequency.weekly.description).tag(Frequency.weekly)
+                            Text(Frequency.monthly.description).tag(Frequency.monthly)
+                            Text(Frequency.quarterly.description).tag(Frequency.quarterly)
+                            Text(Frequency.annually.description).tag(Frequency.annually)
+                        }
+                        .pickerStyle(.menu)
+                        
+                        // Recurrence
+                        Picker("Recurrence", selection: $recurrence) {
+                            Text(Recurrence.determined.description).tag(Recurrence.determined)
+                            Text(Recurrence.indeterminate.description).tag(Recurrence.indeterminate)
+                        }
+                        .pickerStyle(.menu)
                         
                         TextField("Amount", text: $amount)
                         
                         DatePicker(
-                            selection: $dueAt,
+                            selection: $date,
                             in: Date.now...,
                             displayedComponents: .date,
                             label: {
-                                Text("Due At")
+                                Text("Date")
                             }
                         )
                     }
@@ -124,12 +137,14 @@ struct BillForm: View {
         
         let bill = Bill(
             title: title,
-            category: categories[category]
+            category: categories[category],
+            flow: flow,
+            interval: interval,
+            frequency: frequency,
+            recurrence: recurrence,
+            amount: amount.toFloat,
+            date: date
         )
-        bill.amount = Float(amount) ?? 0.0
-        bill.dueAt = dueAt
-        bill.isExpense = isExpense
-        bill.isRecurrent = isRecurrent
         
         modelContext.insert(bill)
 

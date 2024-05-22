@@ -8,38 +8,67 @@ struct Monitor: View {
     // Environment
     @AppStorage("isFirstLaunch") private var isFirstLaunch = true
     
-    static var now: Date {
-        Date.now
-    }
-    static var yesterday: Date {
-        Calendar.current.date(byAdding: .day, value: -2, to: now)!
-    }
-    static var in7Days: Date {
-        Calendar.current.date(byAdding: .day, value: 7, to: now)!
-    }
-    static var inQuarter: Date {
-        Calendar.current.date(byAdding: .month, value: 3, to: now)!
-    }
-    
+    // Queries
     @Query(
-        filter: #Predicate { item in
-            return item.dueAt >= yesterday && item.dueAt <= in7Days
-        },
         sort: [
             SortDescriptor(\Bill.title)
         ]
     )
-    var commingUpBills: [Bill]
+    var bills: [Bill]
     
-    @Query(
-        filter: #Predicate { item in
-            return item.dueAt >= now && item.dueAt <= inQuarter
-        },
-        sort: [
-            SortDescriptor(\Bill.title)
-        ]
-    )
-    var forecastingBills: [Bill]
+    // Computed
+    var commingUpBills: [Bill] {
+        return []
+    }
+    var billsForecasting: [Bill] {
+        
+        var forecast: [Bill] = []
+        
+        for bill in self.bills {
+            
+            if bill.recurrence == .indeterminate {
+                let billStartDate = bill.date
+                let billEndDate = Calendar.current.date(byAdding: .year, value: 1, to: Date.now)!
+                var billCurrentDate = billStartDate
+                
+                while billCurrentDate <= billEndDate {
+                    
+                    forecast.append(
+                        Bill(title: bill.title, category: bill.category, flow: bill.flow, interval: bill.interval, frequency: bill.frequency, recurrence: bill.recurrence, amount: bill.amount, date: billCurrentDate)
+                    )
+                    
+                    if bill.frequency == .daily {
+                        billCurrentDate = Calendar.current.date(byAdding: .day, value: 1 * bill.interval, to: billCurrentDate)!
+                    } else if bill.frequency == .weekly {
+                        billCurrentDate = Calendar.current.date(byAdding: .day, value: 7 * bill.interval, to: billCurrentDate)!
+                    } else if bill.frequency == .monthly {
+                        billCurrentDate = Calendar.current.date(byAdding: .month, value: 1 * bill.interval, to: billCurrentDate)!
+                    } else if bill.frequency == .quarterly {
+                        billCurrentDate = Calendar.current.date(byAdding: .month, value: 3 * bill.interval, to: billCurrentDate)!
+                    } else if bill.frequency == .annually {
+                        billCurrentDate = Calendar.current.date(byAdding: .year, value: 1 * bill.interval, to: billCurrentDate)!
+                    } else {
+                        billCurrentDate = billEndDate
+                    }
+                }
+            }
+        }
+        
+        return forecast
+    }
+    var forecastingBalance: Float {
+        var balance: Float = 0
+        
+        for bill in billsForecasting {
+            if bill.flow == .income {
+                balance += bill.amount
+            } else {
+                balance -= bill.amount
+            }
+        }
+        
+        return Float(balance)
+    }
     
     init() {
         UserDefaults.standard.register(
@@ -79,10 +108,10 @@ struct Monitor: View {
                                                 
                                                 // Amount
                                                 Text(String(bill.amount))
-                                                    .foregroundColor(bill.isExpense ? .red : .green)
+                                                    .foregroundColor(bill.flow == .expense ? .red : .green)
                                                 
                                                 // Due
-                                                Text(bill.dueAt.description)
+                                                Text(bill.date.description)
                                                     .font(.caption)
                                             }
                                         )
@@ -99,7 +128,7 @@ struct Monitor: View {
                 )
                 
                 Section (
-                    header: Text("Quarter Ahead"),
+                    header: Text("Year Ahead"),
                     footer: Text("See an overview about how the current is going so you can take actions ahead of time"),
                     content: {
                         VStack (
@@ -112,7 +141,7 @@ struct Monitor: View {
                                         Text("Balance")
                                         .font(.title)
                                         
-                                        Text("$280.00")
+                                        Text(forecastingBalance.toCurrency)
                                         .foregroundColor(.green)
                                         .font(.title)
                                         
@@ -124,18 +153,19 @@ struct Monitor: View {
                                 .padding(.vertical)
                                 
                                 Chart {
-                                    ForEach(forecastingBills) { bill in
+                                    ForEach(billsForecasting) { bill in
                                         BarMark(
-                                            x: .value("Week", Calendar.current.component(.weekOfYear, from: bill.dueAt)),
+                                            x: .value("Week", bill.date, unit: .weekOfYear),
                                             y: .value("Amount", bill.amount)
                                         )
-                                        .foregroundStyle(by: .value("Type", bill.isExpense ? "Expense" : "Income"))
+                                        .position(by: .value("Flow", bill.flow))
+                                        .foregroundStyle(by: .value("Flow", bill.flow))
                                     }
                                 }
                                 .chartForegroundStyleScale(
                                     [
-                                        "Income": Color.green,
-                                        "Expense": Color.red
+                                        Flow.expense: Color.red,
+                                        Flow.income: Color.green
                                     ]
                                 )
                                 
