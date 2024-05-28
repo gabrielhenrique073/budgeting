@@ -1,26 +1,29 @@
 import SwiftUI
-import SwiftData
 import Foundation
+import CoreData
 
-struct Settings: View {
-    
-    @Environment(\.modelContext) private var modelContext
-    @AppStorage("isFirstLaunch") private var isFirstLaunch = true
+struct SettingsManager: View {
     
     var body: some View {
         NavigationStack {
+            
+            // Context
             List {
                 Section(
                     header: Text("Resources"),
+                    footer: Text("Manage your resources like categories"),
                     content: {
-                        NavigationLink(
-                            destination: CategoriesList(),
+                        
+                        // Categories
+                        NavigationLink (
+                            destination: CategoriesManager(),
                             label: {
                                 Label(
-                                    title: { 
+                                    title: {
                                         Text("Categories")
+                                            .foregroundColor(.primary)
                                     },
-                                    icon: { 
+                                    icon: {
                                         Image(systemName: "list.bullet")
                                             .foregroundColor(.green)
                                     }
@@ -32,19 +35,13 @@ struct Settings: View {
                 
                 Section(
                     header: Text("Erase Data"),
+                    footer: Text("Removing your data is final and there is no way back"),
                     content: {
+                        
+                        // Remove Data
                         Button(
                             action: {
                                 
-                                isFirstLaunch.toggle()
-                                
-                                do {
-                                    try modelContext.delete(model: Bill.self)
-                                    try modelContext.delete(model: Category.self)
-                                    try modelContext.save()
-                                } catch {
-                                    print("Failed to delete data")
-                                }
                             },
                             label: {
                                 Label(
@@ -62,6 +59,8 @@ struct Settings: View {
                     }
                 )
             }
+            
+            // Title
             .navigationTitle("Settings")
             .navigationBarTitleDisplayMode(.large)
         }

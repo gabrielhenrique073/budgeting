@@ -1,8 +1,8 @@
-enum Flow: Int, Codable {
+enum Flow: Int32 {
     case income = 0
     case expense = 1
     
-    var description: String {
+    var label: String {
         switch self {
         case .expense:
             return "Expense"

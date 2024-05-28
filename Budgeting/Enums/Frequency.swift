@@ -1,11 +1,11 @@
-enum Frequency: Int, Codable {
+enum Frequency: Int32 {
     case daily = 0
     case weekly = 1
     case monthly = 2
     case quarterly = 3
     case annually = 4
     
-    var description: String {
+    var label: String {
         switch self {
         case .daily:
             return "Daily"

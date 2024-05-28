@@ -1,8 +1,8 @@
 extension String {
-    var toFloat: Float {
-        return Float(self) ?? 0.0
+    var toFloat: Float? {
+        return Float(self)
     }
-    var toCurrency: String {
-        return self.toFloat.toCurrency
+    var toCurrency: String? {
+        return self.toFloat?.toCurrency
     }
 }

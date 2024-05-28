@@ -8,6 +8,7 @@ extension Float {
         formatter.usesGroupingSeparator = true
         formatter.numberStyle = .currency
         formatter.locale = Locale.current
+        formatter.maximumFractionDigits = 0
         
         return formatter.string(from: self as NSNumber) ?? self.toString
     }
