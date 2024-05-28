@@ -9,6 +9,8 @@ struct SettingsView: View {
     
     @State private var isDataRemovalDialogPresented = false
     
+    @AppStorage("showPastBills") private var showPastBills = true
+    
     init(context: NSManagedObjectContext) {
         self.context = context
         
@@ -23,7 +25,7 @@ struct SettingsView: View {
         NavigationStack {
             List {
                 Section(
-                    header: Text("Your Resources"),
+                    header: Text("Resources"),
                     footer: Text("Manage your resources like the categories"),
                     content: {
                         NavigationLink (
@@ -38,6 +40,27 @@ struct SettingsView: View {
                                     icon: {
                                         Image(systemName: "list.bullet")
                                             .foregroundColor(.green)
+                                    }
+                                )
+                            }
+                        )
+                    }
+                )
+                
+                Section(
+                    header: Text("Coming Up"),
+                    footer: Text("If toggled you will see in the coming up sections the bills that are 2 days past. This might be helpfull so you can make sure you are not missing anything."),
+                    content: {
+                        Toggle(
+                            isOn: $showPastBills,
+                            label: {
+                                Label(
+                                    title: {
+                                        Text("Show past bills")
+                                    },
+                                    icon: {
+                                        Image(systemName: "clock")
+                                            .foregroundColor(.yellow)
                                     }
                                 )
                             }

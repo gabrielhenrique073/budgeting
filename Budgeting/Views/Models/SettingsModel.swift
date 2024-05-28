@@ -13,6 +13,8 @@ extension SettingsView {
         func deleteData() {
             deleteCategories()
             deleteBills()
+            
+            UserDefaults.standard.setValue(true, forKey: "showPastBills")
         }
         func createDefaultData() {
             createDefaultCategories()
