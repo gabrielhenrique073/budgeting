@@ -2,15 +2,14 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22757" systemVersion="23B81" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
     <entity name="Bill" representedClassName="Bill" syncable="YES" codeGenerationType="class">
         <attribute name="amount" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <attribute name="creation" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="date" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="flow" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="frequency" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="createdAt" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="interval" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="recurrence" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="title" attributeType="String"/>
-        <relationship name="category" maxCount="1" deletionRule="No Action" destinationEntity="Category"/>
+        <attribute name="isEndless" attributeType="Boolean" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="nextDueAt" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="period" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="category" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Category"/>
     </entity>
     <entity name="Category" representedClassName="Category" syncable="YES" codeGenerationType="class">
         <attribute name="icon" attributeType="String"/>

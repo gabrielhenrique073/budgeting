@@ -28,10 +28,16 @@ struct Window: View {
 
     var body: some View {
         TabView {
+            
+            BillsView(context: context)
+                .tabItem {
+                    Label("Settings", systemImage: "dollarsign")
+                }
+            
             SettingsView(context: context)
                 .tabItem {
-                   Label("Settings", systemImage: "gear")
-               }
+                    Label("Settings", systemImage: "gear")
+                }
             
             
             

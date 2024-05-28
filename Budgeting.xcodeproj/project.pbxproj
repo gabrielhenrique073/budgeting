@@ -16,14 +16,19 @@
 		5A34473C2C058FBC00ECF5F3 /* CategoryCreatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A34473B2C058FBC00ECF5F3 /* CategoryCreatorModel.swift */; };
 		5A34473E2C059AD500ECF5F3 /* CategoryEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A34473D2C059AD500ECF5F3 /* CategoryEditorView.swift */; };
 		5A3447402C059AE000ECF5F3 /* CategoryEditorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A34473F2C059AE000ECF5F3 /* CategoryEditorModel.swift */; };
+		5A3447422C05A22700ECF5F3 /* BillsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3447412C05A22700ECF5F3 /* BillsView.swift */; };
+		5A3447442C05A23E00ECF5F3 /* BillsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3447432C05A23E00ECF5F3 /* BillsModel.swift */; };
+		5A3447462C05A26300ECF5F3 /* BillCreatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3447452C05A26300ECF5F3 /* BillCreatorModel.swift */; };
+		5A3447482C05A26B00ECF5F3 /* BillEditorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3447472C05A26B00ECF5F3 /* BillEditorModel.swift */; };
+		5A34474A2C05A2C700ECF5F3 /* BillEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3447492C05A2C700ECF5F3 /* BillEditorView.swift */; };
+		5A34474C2C05A2D100ECF5F3 /* BillCreatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A34474B2C05A2D100ECF5F3 /* BillCreatorView.swift */; };
+		5A3447552C05C6F100ECF5F3 /* CustomLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3447542C05C6F100ECF5F3 /* CustomLabelStyle.swift */; };
 		5A8A5F0A2BFD31F000DEB242 /* BillsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8A5EFC2BFD31F000DEB242 /* BillsList.swift */; };
 		5A8A5F0D2BFD31F000DEB242 /* Monitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8A5EFF2BFD31F000DEB242 /* Monitor.swift */; };
 		5A8A5F0F2BFD31F000DEB242 /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8A5F012BFD31F000DEB242 /* Welcome.swift */; };
 		5A8A5F122BFD31F000DEB242 /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8A5F062BFD31F000DEB242 /* Window.swift */; };
 		5A8A5F132BFD31F000DEB242 /* Index.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8A5F072BFD31F000DEB242 /* Index.swift */; };
-		5A8A5F182BFDAD5400DEB242 /* Frequency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8A5F172BFDAD5400DEB242 /* Frequency.swift */; };
-		5A8A5F1A2BFDB05E00DEB242 /* Recurrence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8A5F192BFDB05E00DEB242 /* Recurrence.swift */; };
-		5A8A5F1C2BFDB2E800DEB242 /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8A5F1B2BFDB2E800DEB242 /* Flow.swift */; };
+		5A8A5F182BFDAD5400DEB242 /* Period.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8A5F172BFDAD5400DEB242 /* Period.swift */; };
 		5A8A5F1F2BFDB45500DEB242 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8A5F1E2BFDB45500DEB242 /* String.swift */; };
 		5A8A5F212BFDC62600DEB242 /* Float.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8A5F202BFDC62600DEB242 /* Float.swift */; };
 		5AA8D0B12BFD3169004C7223 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AA8D0B02BFD3169004C7223 /* Assets.xcassets */; };
@@ -49,14 +54,19 @@
 		5A34473B2C058FBC00ECF5F3 /* CategoryCreatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCreatorModel.swift; sourceTree = "<group>"; };
 		5A34473D2C059AD500ECF5F3 /* CategoryEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryEditorView.swift; sourceTree = "<group>"; };
 		5A34473F2C059AE000ECF5F3 /* CategoryEditorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryEditorModel.swift; sourceTree = "<group>"; };
+		5A3447412C05A22700ECF5F3 /* BillsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsView.swift; sourceTree = "<group>"; };
+		5A3447432C05A23E00ECF5F3 /* BillsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsModel.swift; sourceTree = "<group>"; };
+		5A3447452C05A26300ECF5F3 /* BillCreatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillCreatorModel.swift; sourceTree = "<group>"; };
+		5A3447472C05A26B00ECF5F3 /* BillEditorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillEditorModel.swift; sourceTree = "<group>"; };
+		5A3447492C05A2C700ECF5F3 /* BillEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillEditorView.swift; sourceTree = "<group>"; };
+		5A34474B2C05A2D100ECF5F3 /* BillCreatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillCreatorView.swift; sourceTree = "<group>"; };
+		5A3447542C05C6F100ECF5F3 /* CustomLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabelStyle.swift; sourceTree = "<group>"; };
 		5A8A5EFC2BFD31F000DEB242 /* BillsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillsList.swift; sourceTree = "<group>"; };
 		5A8A5EFF2BFD31F000DEB242 /* Monitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Monitor.swift; sourceTree = "<group>"; };
 		5A8A5F012BFD31F000DEB242 /* Welcome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
 		5A8A5F062BFD31F000DEB242 /* Window.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
 		5A8A5F072BFD31F000DEB242 /* Index.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Index.swift; sourceTree = "<group>"; };
-		5A8A5F172BFDAD5400DEB242 /* Frequency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Frequency.swift; sourceTree = "<group>"; };
-		5A8A5F192BFDB05E00DEB242 /* Recurrence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recurrence.swift; sourceTree = "<group>"; };
-		5A8A5F1B2BFDB2E800DEB242 /* Flow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
+		5A8A5F172BFDAD5400DEB242 /* Period.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Period.swift; sourceTree = "<group>"; };
 		5A8A5F1E2BFDB45500DEB242 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		5A8A5F202BFDC62600DEB242 /* Float.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Float.swift; sourceTree = "<group>"; };
 		5AA8D0A92BFD3168004C7223 /* Budgeting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Budgeting.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,11 +98,11 @@
 		5A2FAC3E2C0565DF00785C9A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5A3447532C05C6DC00ECF5F3 /* Styles */,
 				5A3447362C05843D00ECF5F3 /* Models */,
 				5A2FAC452C05676A00785C9A /* SettingsView.swift */,
-				5A2FAC4E2C056B4200785C9A /* CategoriesView.swift */,
-				5A2FAC532C0575C900785C9A /* CategoryCreatorView.swift */,
-				5A34473D2C059AD500ECF5F3 /* CategoryEditorView.swift */,
+				5A34474F2C05A4D000ECF5F3 /* Category */,
+				5A3447502C05A4D700ECF5F3 /* Bill */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -101,11 +111,58 @@
 			isa = PBXGroup;
 			children = (
 				5A3447372C05844800ECF5F3 /* SettingsModel.swift */,
+				5A3447522C05A52400ECF5F3 /* Category */,
+				5A3447512C05A51C00ECF5F3 /* Bill */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5A34474F2C05A4D000ECF5F3 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				5A2FAC4E2C056B4200785C9A /* CategoriesView.swift */,
+				5A2FAC532C0575C900785C9A /* CategoryCreatorView.swift */,
+				5A34473D2C059AD500ECF5F3 /* CategoryEditorView.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		5A3447502C05A4D700ECF5F3 /* Bill */ = {
+			isa = PBXGroup;
+			children = (
+				5A3447412C05A22700ECF5F3 /* BillsView.swift */,
+				5A34474B2C05A2D100ECF5F3 /* BillCreatorView.swift */,
+				5A3447492C05A2C700ECF5F3 /* BillEditorView.swift */,
+			);
+			path = Bill;
+			sourceTree = "<group>";
+		};
+		5A3447512C05A51C00ECF5F3 /* Bill */ = {
+			isa = PBXGroup;
+			children = (
+				5A3447432C05A23E00ECF5F3 /* BillsModel.swift */,
+				5A3447452C05A26300ECF5F3 /* BillCreatorModel.swift */,
+				5A3447472C05A26B00ECF5F3 /* BillEditorModel.swift */,
+			);
+			path = Bill;
+			sourceTree = "<group>";
+		};
+		5A3447522C05A52400ECF5F3 /* Category */ = {
+			isa = PBXGroup;
+			children = (
 				5A3447392C058D4C00ECF5F3 /* CategoriesModel.swift */,
 				5A34473B2C058FBC00ECF5F3 /* CategoryCreatorModel.swift */,
 				5A34473F2C059AE000ECF5F3 /* CategoryEditorModel.swift */,
 			);
-			path = Models;
+			path = Category;
+			sourceTree = "<group>";
+		};
+		5A3447532C05C6DC00ECF5F3 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				5A3447542C05C6F100ECF5F3 /* CustomLabelStyle.swift */,
+			);
+			path = Styles;
 			sourceTree = "<group>";
 		};
 		5A8A5F022BFD31F000DEB242 /* Views__ */ = {
@@ -127,9 +184,7 @@
 		5A8A5F142BFDAD0100DEB242 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
-				5A8A5F172BFDAD5400DEB242 /* Frequency.swift */,
-				5A8A5F192BFDB05E00DEB242 /* Recurrence.swift */,
-				5A8A5F1B2BFDB2E800DEB242 /* Flow.swift */,
+				5A8A5F172BFDAD5400DEB242 /* Period.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -258,25 +313,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A34474A2C05A2C700ECF5F3 /* BillEditorView.swift in Sources */,
 				5A34473A2C058D4C00ECF5F3 /* CategoriesModel.swift in Sources */,
 				5A3447382C05844800ECF5F3 /* SettingsModel.swift in Sources */,
 				5A34473C2C058FBC00ECF5F3 /* CategoryCreatorModel.swift in Sources */,
 				5AB591ED2C01B327005BE51E /* Model.xcdatamodeld in Sources */,
 				5A8A5F132BFD31F000DEB242 /* Index.swift in Sources */,
 				5AB591EF2C01B725005BE51E /* Data.swift in Sources */,
+				5A3447462C05A26300ECF5F3 /* BillCreatorModel.swift in Sources */,
 				5AB591E52C019B93005BE51E /* Forecasting.swift in Sources */,
 				5A8A5F0A2BFD31F000DEB242 /* BillsList.swift in Sources */,
 				5A34473E2C059AD500ECF5F3 /* CategoryEditorView.swift in Sources */,
 				5A2FAC542C0575C900785C9A /* CategoryCreatorView.swift in Sources */,
+				5A3447482C05A26B00ECF5F3 /* BillEditorModel.swift in Sources */,
 				5A2FAC462C05676A00785C9A /* SettingsView.swift in Sources */,
-				5A8A5F1C2BFDB2E800DEB242 /* Flow.swift in Sources */,
+				5A34474C2C05A2D100ECF5F3 /* BillCreatorView.swift in Sources */,
 				5AB591E72C01A25A005BE51E /* Int.swift in Sources */,
 				5A2FAC4F2C056B4200785C9A /* CategoriesView.swift in Sources */,
-				5A8A5F182BFDAD5400DEB242 /* Frequency.swift in Sources */,
-				5A8A5F1A2BFDB05E00DEB242 /* Recurrence.swift in Sources */,
+				5A8A5F182BFDAD5400DEB242 /* Period.swift in Sources */,
 				5A2FAC3C2C027DD200785C9A /* CategoriesManager.swift in Sources */,
 				5A8A5F0F2BFD31F000DEB242 /* Welcome.swift in Sources */,
+				5A3447422C05A22700ECF5F3 /* BillsView.swift in Sources */,
+				5A3447552C05C6F100ECF5F3 /* CustomLabelStyle.swift in Sources */,
 				5AB591E12C0183D7005BE51E /* Date.swift in Sources */,
+				5A3447442C05A23E00ECF5F3 /* BillsModel.swift in Sources */,
 				5A8A5F212BFDC62600DEB242 /* Float.swift in Sources */,
 				5A8A5F0D2BFD31F000DEB242 /* Monitor.swift in Sources */,
 				5A8A5F1F2BFDB45500DEB242 /* String.swift in Sources */,

@@ -55,9 +55,7 @@ struct CategoryEditorView: View {
                     placement: .topBarLeading,
                     content: {
                         Button(
-                            action: {
-                                dismiss()
-                            },
+                            action: onCancel,
                             label: {
                                 Text("Cancel")
                             }
@@ -68,16 +66,7 @@ struct CategoryEditorView: View {
                     placement: .topBarTrailing,
                     content: {
                         Button(
-                            action: {
-                                
-                                model.edit(
-                                    item: item,
-                                    name: name,
-                                    icon: icon
-                                )
-                                
-                                dismiss()
-                            },
+                            action: onDone,
                             label: {
                                 Text("Done")
                             }
@@ -90,5 +79,18 @@ struct CategoryEditorView: View {
             .navigationTitle("Edit Category")
             .navigationBarTitleDisplayMode(.inline)
         }
+    }
+    
+    func onCancel() {
+        dismiss()
+    }
+    func onDone() {
+        model.edit(
+            item: item,
+            name: name,
+            icon: icon
+        )
+        
+        dismiss()
     }
 }

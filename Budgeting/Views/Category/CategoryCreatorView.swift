@@ -50,9 +50,7 @@ struct CategoryCreatorView: View {
                     placement: .topBarLeading,
                     content: {
                         Button(
-                            action: {
-                                dismiss()
-                            },
+                            action: onCancel,
                             label: {
                                 Text("Cancel")
                             }
@@ -63,15 +61,7 @@ struct CategoryCreatorView: View {
                     placement: .topBarTrailing,
                     content: {
                         Button(
-                            action: {
-                                
-                                model.create(
-                                    name: name,
-                                    icon: icon
-                                )
-                                
-                                dismiss()
-                            },
+                            action: onDone,
                             label: {
                                 Text("Done")
                             }
@@ -84,5 +74,17 @@ struct CategoryCreatorView: View {
             .navigationTitle("New Category")
             .navigationBarTitleDisplayMode(.inline)
         }
+    }
+    
+    func onCancel() {
+        dismiss()
+    }
+    func onDone() {
+        model.create(
+            name: name,
+            icon: icon
+        )
+        
+        dismiss()
     }
 }
